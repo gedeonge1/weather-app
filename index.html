@@ -7,7 +7,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="flex-head">
+            <h1>GIDEON WEATHER APP</h1>
+            <div class="search">
+                <input type="text" id="search-input" placeholder="Enter city name" value="kigali">
+                <button id="search-btn">search</button>
+            </div> 
+        </div>   
+        <div id="error">Please! enter a valid city name.</div>
+    </header>
+
+    <main>
+        <div class="flex-current-weather">
+            <section class="current-weather">
+                <div class="place">
+                    <h2 class="region"></h2>
+                    <p class="date"></p>
+                </div>
     
+                <div class="temp-img">
+                    <span class="temp"></span>
+                    <img  id="image">
+                    <p class="text-condition"></p>
+                </div>
+            </section>
+        </div>
+
+        <section class="weather-details">
+            <div class="col">
+                <p class="property">Sunrise</p>
+                <p class="result" id="sunrise"></p>
+            </div>
+            <div class="col">
+                <p class="property">Wind Speed</p>
+                <p class="result" id="wind-speed"></p>
+            </div>
+            <div class="col">
+                <p class="property">Visibility</p>
+                <p class="result" id="visibility"></p>
+            </div>
+            <div class="col">
+                <p class="property">UV</p>
+                <p class="result" id="uv"></p>
+            </div>
+        </section>
+        <section class="weather-details">
+            <div class="col">
+                <p class="property">Sunset</p>
+                <p class="result" id="sunset"></p>
+            </div>
+            <div class="col">
+                <p class="property">Wind Direction</p>
+                <p class="result" id="wind-direction"></p>
+            </div>
+            <div class="col">
+                <p class="property">Humidity</p>
+                <p class="result" id="humidity"></p>
+            </div>
+            <div class="col">
+                <p class="property">Cloud</p>
+                <p class="result" id="cloud-cover"></p>
+            </div>
+        </section>
+        
+        <section class="flex-forecast-details">
+            <div class="forecast-head">Hourly forecast</div>
+            <div class="forecast-details-hours"></div>
+            <div class="forecast-details-temp"></div>
+        </section>
+
+    </main> 
 
     <script src="script.js"></script>
 </body>
