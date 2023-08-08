@@ -1,4 +1,4 @@
-# weather-app
+# Gideon Weather App
 
 Welcome to the Weather App project! This web application allows users to search for weather information for different cities and countries.
 
