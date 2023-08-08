@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('https://images.pexels.com/photos/2310713/pexels-photo-2310713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;    
+    color: navy;
+}
+header{
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-head{
+    display: flex;
+    
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+#error{
+    margin-top: 10px;
+    color: black;
+}
+.flex-head h1{
+    font-size: 50px;
+}
+header .search input{
+    border: 2px solid navy;
+    border-radius: 16px;
+    padding: 8px;
+    width: 250px;
+    background-color: transparent;
+    color: white;
+}
+input::placeholder{
+    color: navy;
+}
+header .search input:focus {
+    border: none;
+    border-radius: 16px;
+    padding: 8px;
+    width: 250px;
+}
+header .search button{
+    border: 2px solid navy;
+    border-radius: 16px;
+    padding: 4px;
+    color: navy;
+    background-color: transparent;
+}
+header .search button:hover{
+    cursor: pointer;
+    background-color: navy;
+    color: white;
+}
+.current-weather .place .date{
+    color: green;
+    font-size: 18px;
+}
+.current-weather .place .region{
+    font-size: 40px;
+    
+}
+.current-weather .temp-img .temp{
+    font-size: 70px;
+    color: rgb(65, 108, 4);
+}
+.current-weather{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    align-items: flex-end;
+    height: 100px;
+    width: 80%;
+   
+}
+.flex-current-weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.weather-details{
+    
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.property{
+   
+    font-weight: 500;
+    font-size: 20px;
+}
+.result, .text-condition{
+    font-size: 25px;
+    color: green;
+    font-weight: bolder;
+}
+.forecast-details-hours, .forecast-details-temp{
+    
+    display: flex;
+    justify-content: space-between;
+}
+.forecast-details-hours{
+    font-size: 18px;
+}
+.forecast-details-temp{
+    color: green;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+
+.forecast-head{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+.forecast-col{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+}
+.forecast-property{
+    
+    font-weight: 700;
+    font-size: 17px;
+}
+.forecast-result{
+    font-size: 19px;
+    font-weight: bold;
+    color: green;
+}
