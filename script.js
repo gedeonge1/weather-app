@@ -69,6 +69,13 @@ async function fetchData(){
             timePara.textContent = hour
             hourlySection.appendChild(timePara)
          });
+             //getting forecast array of each hour temperature and looping through them and displaying each hour on webpage inside newly created paragraph
+             foreCastArr.forEach(item => {
+                let hourTemp = item.temp_c
+                let tempPara = document.createElement('p')
+                tempPara.textContent = `${hourTemp}°`
+                hourlyTemp.appendChild(tempPara) 
+          });
+     }
     
-}
 }
