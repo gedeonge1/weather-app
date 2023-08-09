@@ -18,12 +18,14 @@ let hourlySection = document.querySelector('.forecast-details-hours')
 let hourlyTemp = document.querySelector('.forecast-details-temp')
 let searchBtn = document.querySelector('#search-btn')
 let error = document.querySelector('#error')
+const parentDivHours = document.querySelector('.forecast-details-hours')
+const parentDivTemp = document.querySelector('.forecast-details-temp');
 
 //declaring async fectData() function
 async function fetchData(){
 
     //handling any error that might happen by using trycatch blocks
-    
+
     try{    
     //getting input value (city name) to pass in url api
     let city = searchInput.value
@@ -81,6 +83,24 @@ async function fetchData(){
           });
      }}catch(error){
         console.error(error)
-     }
-    
+     } 
 }
+
+//function that updates forecast data by removing previous paragaphs and add new paragaraphs when location is updated
+function search(){
+    const childElementsHours = parentDivHours.querySelectorAll('p')
+    childElementsHours.forEach(child => {
+                         parentDivHours.removeChild(child);
+                      })
+ 
+    const childElementsTemp = parentDivTemp.querySelectorAll('p');
+    childElementsTemp.forEach(child => {
+                         parentDivTemp.removeChild(child);
+                      })
+    fetchData()
+ }
+
+ //fetching new data when search  button is clicked
+searchBtn.addEventListener('click', () => {
+    search()
+ })
