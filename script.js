@@ -21,5 +21,10 @@ let searchBtn = document.querySelector('#search-btn')
 
 //declaring async fectData() function
 async function fetchData(){
-
+    //getting input value (city name writen insdie input) to pass in url api
+    let city = searchInput.value
+    const key = '6d9e65dac56d40bf88b144355230508'
+    let url = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${encodeURIComponent(city)}&days=1&aqi=no&alerts=no`
+    //fetching data
+    let promise = await fetch(url, {mode: 'cors'})
 }
