@@ -111,3 +111,6 @@ searchInput.addEventListener('keydown',(event) =>{
        search()
     }
  })
+
+ //calling fetchData() that displays default information according to default input value when page is loaded at first time or when page is refreshed
+fetchData()
