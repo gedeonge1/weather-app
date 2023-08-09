@@ -20,8 +20,11 @@ let searchBtn = document.querySelector('#search-btn')
 let error = document.querySelector('#error')
 
 //declaring async fectData() function
-
 async function fetchData(){
+
+    //handling any error that might happen by using trycatch blocks
+    
+    try{    
     //getting input value (city name) to pass in url api
     let city = searchInput.value
     const key = '6d9e65dac56d40bf88b144355230508'
@@ -76,6 +79,8 @@ async function fetchData(){
                 tempPara.textContent = `${hourTemp}°`
                 hourlyTemp.appendChild(tempPara) 
           });
+     }}catch(error){
+        console.error(error)
      }
     
 }
