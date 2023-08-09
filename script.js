@@ -35,5 +35,11 @@ async function fetchData(){
         main.style.display = 'none' ;
         error.style.display = 'block'
         searchInput.value = ''
-     }
+     }else if(promise.status == 200){
+        error.style.display = 'none'
+        main.style.display = 'block'
+     //converting resolved json data into object 
+        let result = await promise.json();
+    
+}
 }
