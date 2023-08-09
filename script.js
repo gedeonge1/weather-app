@@ -17,14 +17,23 @@ let cover = document.querySelector('#cloud-cover')
 let hourlySection = document.querySelector('.forecast-details-hours')
 let hourlyTemp = document.querySelector('.forecast-details-temp')
 let searchBtn = document.querySelector('#search-btn')
-
+let error = document.querySelector('#error')
 
 //declaring async fectData() function
+
 async function fetchData(){
-    //getting input value (city name writen insdie input) to pass in url api
+    //getting input value (city name) to pass in url api
     let city = searchInput.value
     const key = '6d9e65dac56d40bf88b144355230508'
     let url = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${encodeURIComponent(city)}&days=1&aqi=no&alerts=no`
+    
     //fetching data
     let promise = await fetch(url, {mode: 'cors'})
+
+     //handling error if user passes in invalid location
+     if(!promise.ok){
+        main.style.display = 'none' ;
+        error.style.display = 'block'
+        searchInput.value = ''
+     }
 }
