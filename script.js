@@ -38,7 +38,7 @@ async function fetchData(){
      }else if(promise.status == 200){
         error.style.display = 'none'
         main.style.display = 'block'
-        
+
         //converting resolved json data into object 
         let result = await promise.json();
 
@@ -58,6 +58,17 @@ async function fetchData(){
         humidity.textContent = result.current.humidity
         uv.textContent = result.current.uv
         cover.textContent = `${result.current.cloud}%`
+
+        //getting forecast array of daily hours
+        const foreCastArr = result.forecast.forecastday[0].hour
+
+        //lopping through foreCastArr by creating new paragraph in each iteration and then pass iterated hour as textContent of the created paragraph
+        foreCastArr.forEach(item => {
+            let hour = item.time.slice(11)
+            let timePara = document.createElement('p')
+            timePara.textContent = hour
+            hourlySection.appendChild(timePara)
+         });
     
 }
 }
