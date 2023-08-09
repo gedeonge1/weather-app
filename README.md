@@ -9,3 +9,11 @@ Welcome to the Weather App project! This web application allows users to search 
 - See hourly forecasts for the selected location.
 - Display sunrise and sunset times.
 - Fetches weather data from the WeatherAPI service.
+
+## Visit Site
+
+- visit my site here: https://gedeonge1.github.io/weather-app/
+
+## Develoment Branch
+
+- ckeck the codebase: https://github.com/gedeonge1/weather-app/tree/develop
