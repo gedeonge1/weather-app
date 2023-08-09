@@ -100,7 +100,14 @@ function search(){
     fetchData()
  }
 
- //fetching new data when search  button is clicked
+//fetching new data when search  button is clicked
 searchBtn.addEventListener('click', () => {
     search()
+ })
+
+//fetching new data according to input value when enter button is clicked
+searchInput.addEventListener('keydown',(event) =>{
+    if(event.key === 'Enter'){
+       search()
+    }
  })
